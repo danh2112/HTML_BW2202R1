@@ -1,0 +1,36 @@
+html{
+    height: 100%;
+}
+body{
+    background-color: lightgrey;
+    height: 100%;
+}
+
+
+#menu{
+    background-color: black;
+    color: white;
+    height: 60px;
+}
+
+#menu a{
+    color: white
+}
+
+#menu .nav-link.active{
+    background-color: rgba(0, 0, 0, 0.582);
+}
+
+#body{
+    height: calc(100% - 120px)
+}
+
+#content{
+    background-color: white;
+    height: 100%;
+}
+
+#footer{
+    height: 60px;
+    background-color: grey;
+}

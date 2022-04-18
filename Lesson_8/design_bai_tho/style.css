@@ -1,0 +1,63 @@
+html,body{
+	font-size:16px;
+}
+body{
+	background-image: url('/images/bai-anh-trang.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+#anhtrang{
+	width: 500px;
+    margin: auto;
+	background: rgba(83, 78, 59, 0.6); /* them a de chinh do mo ao cua mau background = 0.6 */
+	padding: 1rem 2rem;
+}
+#anhtrang h1{
+	text-align: center;
+	color:rgb(199, 164, 103);
+	font-family: 'Lobster',sans-serif;
+	font-size:3rem;
+}
+#anhtrang h1::before, #anhtrang h1::after{
+	content: "_";
+	color: white;
+}
+
+#anhtrang ul{
+	margin-left: 130px;
+}
+ul li{
+	list-style: none;
+    font-family: "Courier";
+    margin-bottom: 5px;
+}
+ul li:nth-child(2n){
+  font-weight: 600;
+  color:rgb(204, 204, 216)
+}
+ul li:nth-child(2n+1){
+	color: orange;
+  	font-style: italic;
+}
+ul li:nth-child(8n+1),ul li:nth-child(8n+2),ul li:nth-child(8n+3),ul li:nth-child(8n+4){
+	margin-left: -4rem;
+}
+/*
+(4n+1) cho moi doan tho co 4 dong 
+2rem: de cac doan tho duoc co khoang cach phan biet giua cac doan, 1rem = 1 font size cua tag html = 16px
+*/
+ul li:nth-child(4n+1){
+	margin-top: 2rem
+}
+
+#trangAn{
+	display: none;
+}
+
+h1:hover>#trangAn{
+	display: block;
+	position: fixed;
+	right: 30px;
+	top: 30px;
+}
