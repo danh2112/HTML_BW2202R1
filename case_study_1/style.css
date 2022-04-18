@@ -1,0 +1,351 @@
+html,body,* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sectionHeader{
+    text-align: center;
+    padding-bottom: 70px;
+}
+.sectionHeader h1{
+    margin: auto;
+    font-size: 20px;
+    color: #009688;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+}
+.sectionHeader h1::before{
+    content: '';
+    width: 50px;
+    height: 35px;
+    background: linear-gradient(#019578,#fff);
+    position: absolute;
+    top: -20px;
+    left: 0;
+    z-index: -1;
+    transform: rotate(10deg);
+    border-top-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+.sectionHeader h3{
+    font-size: 50px;
+    margin: 0;
+}
+
+#header{
+    background: linear-gradient(rgba(0,0,0,0.5),#009688),
+    url("images/banner.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    padding-bottom: 2rem;
+}
+#logo{
+    width: 140px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+#headerContent{
+    text-align: center;
+    color: #fff;
+    padding-top: 10rem;
+}
+
+#headerTitle{
+    font-size: 8rem;
+    font-weight: 400;
+    color: white;
+}
+#headerDescription{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: normal;
+}
+.headerMenuItem{
+    position: relative;
+    width: 150px;
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 10px;
+    padding: 12px 0;
+    color: #fff;
+    background: linear-gradient(to right, white 50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    border: .5px solid #fff;
+    z-index: 1;
+    transition: all 0.5s;
+    transition-property: color background;
+}
+.headerMenuItem:hover{
+    background-position: left bottom;
+    transition: 0.5s;
+    color: black;
+}
+
+#drawerMenu{
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    background: #009688;
+    z-index: 2;
+    transition: right 0.5s;
+}
+
+#menu.shown #drawerMenu{
+    right: 0;
+}
+
+#drawerMenu ul li{
+    list-style: none;
+    margin: 50px 20px;
+}
+#drawerMenu  ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#drawerBtn{
+    width: 50px;
+    height: 50px;
+    background: #009688;
+    text-align: center;
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    border-radius: 3px;
+    z-index: 3;
+    cursor: pointer;
+}
+#drawerIcon{
+    width: 20px;
+    margin-top: 15px;
+    background-image: url(/images/menu.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 20px;
+    background-size: cover;
+    display: inline-block;
+}
+
+#menu.shown #drawerIcon{
+    background-image: url(/images/close.png);
+}
+
+#feature{
+    width: 100%;
+    padding: 70px 0;
+}
+
+#featureContent{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.features{
+    flex-basis: 50%;
+}
+#featuresImg{
+    flex-basis: 50%;
+    margin: auto;
+}
+#featuresImg img{
+    width: 70%;
+    border-radius: 10px;
+}
+.featureItemTitle{
+    text-align: left;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #009688;
+}
+.featureItemDescription{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.featureItemIcon .bi{
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    border-radius: 8px;
+    color: #009688;
+}
+.featureItemText p{
+    text-align: initial;
+    padding: 0 20px;
+}
+
+#service{
+    width: 100%;
+    padding: 70px 0;
+    background: #efefef;
+}
+#services{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: auto;
+}
+.serviceItem{
+    flex-basis: 48%;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 20px;
+    color: #fff;
+    position: relative;
+}
+.serviceItem img{
+    width: 100%;
+    border-radius: 7px;
+}
+
+.serviceItem:hover{
+    opacity: 1;
+    background: linear-gradient(rgba(0,0,0,0.5),#009688);
+}
+
+.serviceItem:hover img{
+    opacity: 0.5;
+    height: 100%;
+}
+.serviceDescription{
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    transition: 1s;
+}
+hr{
+    background: #fff;
+    height: 2px;
+    border: 0;
+    margin: 15px auto;
+    width: 60%;
+}
+.serviceDescription p{
+    font-size: 14px;
+}
+.serviceItem:hover .serviceDescription{
+    bottom: 40%;
+    opacity: 1;
+}
+#review{
+    width: 100%;
+    padding: 70px 0;
+}
+#reviewSlider{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.reviewItem{
+    flex-basis: 28%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 3px #00968814;
+    cursor: pointer;
+    transition: transform .5s;
+}
+.reviewItem p{
+    font-size: 14px;
+}
+.userBlock{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+.userAvatar{
+    width: 40px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+.userInfo .bi{
+    margin-left: 10px;
+    font-size: 20px;
+    color: #009688;
+}
+.userInfo small{
+    color: #009688;
+}
+.reviewItem:hover{
+    transform: translateY(7px);
+}
+
+#footer{
+    padding: 100px 0 20px;
+    background: #efefef;
+    position: relative;
+}
+#footerContent{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#footerContent>div{
+    flex-basis: 45%;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+#footerRight{
+    text-align: right;
+}
+#footerContent h1{
+    margin: 10px 0;
+}
+#footerContent p{
+    line-height: 35px;
+}
+#footerImg{
+    max-width: 370px;
+    opacity: 0.1;
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    transform: translate(-50%,-50%);
+}
+#socialLinks{
+    text-align: center;
+}
+#socialLinks span.bi{
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 40px 5px 0;
+    color: #009688;
+    cursor: pointer;
+    transition: .5s;
+}
+#socialLinks span.bi:hover{
+    color: #ff9900;
+}
+#socialLinks p{
+    font-size: 12px;
+    margin-top: 20px;
+}
+#footerContent .bi{
+    font-size: 20px;
+    color: #009688;
+    margin: 10px;
+}
