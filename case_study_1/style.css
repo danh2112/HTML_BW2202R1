@@ -127,7 +127,7 @@ html,body,* {
 #drawerIcon{
     width: 20px;
     margin-top: 15px;
-    background-image: url(/images/menu.png);
+    background-image: url(images/menu.png);
     background-repeat: no-repeat;
     background-position: center center;
     height: 20px;
@@ -136,7 +136,7 @@ html,body,* {
 }
 
 #menu.shown #drawerIcon{
-    background-image: url(/images/close.png);
+    background-image: url(images/close.png);
 }
 
 #feature{
